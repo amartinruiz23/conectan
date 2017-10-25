@@ -7,6 +7,7 @@ using namespace std;
     alinear = al;
     empates = 0;
     fichasturno = f;
+    fichas_en_tablero = 0;
   }
 
   Tablero::Tablero(Matriz mat, int al, int f){
@@ -15,6 +16,7 @@ using namespace std;
     empates = 0;
     m = mat;
     fichasturno = f;
+    fichas_en_tablero = 0;
   }
 
   Tablero::Tablero(){
@@ -24,6 +26,7 @@ using namespace std;
     empates = 0;
     Matriz mat;
     m = mat;
+    fichas_en_tablero = 0;
   }
 
   Tablero::~Tablero(){
@@ -31,6 +34,7 @@ using namespace std;
     turno = 0;
     alinear = 0;
     empates = 0;
+    fichas_en_tablero = 0;
   }
 
   void Tablero::operator=(const Tablero& t){
@@ -279,4 +283,12 @@ int Tablero::Introducidas() const{
 
   int Tablero::TurnosJugados() const{
     return Introducidas()/FichasTurno();
+  }
+
+  void Tablero::setFichasTablero(int fichas) {
+    fichas_en_tablero = fichas;
+  }
+
+  int Tablero::fichasTotalesEnTablero() const {
+    return fichas_en_tablero;
   }
