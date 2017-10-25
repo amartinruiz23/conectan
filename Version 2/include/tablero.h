@@ -11,6 +11,8 @@ class Tablero{
   int empates;
   int fichasturno;
 
+  int fichas_en_tablero;
+
   void CambiarTurno();
 
   void IncrementaEmpates();
@@ -59,6 +61,10 @@ public:
     int Introducidas() const;
 
     int Empates() const;
+
+    void setFichasTablero(int fichas);
+
+    int fichasTotalesEnTablero() const;
 
     };
 

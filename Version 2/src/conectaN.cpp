@@ -160,6 +160,10 @@ cout << jugador2.Nombre() << " ha ganado " << jugador2.Ganadas() << " partidas c
 
 cout << "Empates: " << jugador1.Empatadas();
 
+tablero.setFichasTablero(tablero.CuentaFichas());
+
+cout << "\nNumero de fichas dentro del tablero: " << tablero.fichasTotalesEnTablero() << endl;
+
   cout << "\n";
 
 }
